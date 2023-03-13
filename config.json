@@ -1,0 +1,27 @@
+{
+	"name": {
+		"zh-cn": "TT无人机扩展套件",
+		"en": "TT_Drone_Expansion_Kit"
+	},
+	"description": {
+		"zh-cn": "包含激光、舵机、手势、温湿度、蜂鸣器、OLED等多种传感器执行器。",
+		"en": "Including laser, servo, gesture, temperature and humidity, buzzer, OLED and other sensor actuators."
+	},
+	"author": "sydmdhm",
+	"email": "1580024574@qq.com",
+	"license": "MIT",
+	"isBoard": false,
+	"id": "TT_Drone_EXKit",
+	"platform": ["win", "mac", "web"],
+	"version": "0.0.1",
+	"asset": {
+		"arduinoC": {
+			"dir": "arduinoC/",
+			"version": "0.0.1",
+			"board": ["telloesp32"],
+			"main": "main.ts",
+			"files": [
+			  ]
+		}
+	}
+}

@@ -1,0 +1,38 @@
+<svg id="按钮" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="80" height="50" viewBox="0 0 800 500">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fafcfb;
+        stroke-width: 3px;
+      }
+
+      .cls-1, .cls-2 {
+        stroke: #000;
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke-width: 2px;
+      }
+    </style>
+  </defs>
+  <image id="背景" width="800" height="500" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAAAyCAYAAADLLVz8AAAAe0lEQVRoge3QQQEAIAwAoWn/zrOD94UInN3d4dtV1wiMBEYCI4GRwEhgJDASGAmMBEYCI4GRwEhgJDASGAmMBEYCI4GRwEhgJDASGAmMBEYCI4GRwEhgJDASGAmMBEYCI4GRwEhgJDASGAmMBEYCI4GRwEhgJDASWMzMA1ASBGBEuNNMAAAAAElFTkSuQmCC"/>
+  <path id="圆角矩形_1" data-name="圆角矩形 1" class="cls-1" d="M196,75H604a96,96,0,0,1,96,96V299A126,126,0,0,1,574,425H226A126,126,0,0,1,100,299V171A96,96,0,0,1,196,75Z"/>
+  <rect id="圆角矩形_2" data-name="圆角矩形 2" class="cls-2" x="154" y="114" width="35" height="35" rx="10" ry="10"/>
+  <circle id="椭圆_1" data-name="椭圆 1" class="cls-2" cx="171" cy="132" r="10"/>
+  <rect id="圆角矩形_2-2" data-name="圆角矩形 2" class="cls-2" x="614" y="114" width="35" height="35" rx="10" ry="10"/>
+  <circle id="椭圆_1-2" data-name="椭圆 1" class="cls-2" cx="631" cy="132" r="10"/>
+  <rect id="圆角矩形_2-3" data-name="圆角矩形 2" class="cls-2" x="322" y="252" width="35" height="35" rx="10" ry="10"/>
+  <circle id="椭圆_1-3" data-name="椭圆 1" class="cls-2" cx="339" cy="270" r="10"/>
+  <rect id="圆角矩形_2-4" data-name="圆角矩形 2" class="cls-2" x="438" y="252" width="35" height="35" rx="10" ry="10"/>
+  <circle id="椭圆_1-4" data-name="椭圆 1" class="cls-2" cx="455" cy="270" r="10"/>
+  <rect id="圆角矩形_2-5" data-name="圆角矩形 2" class="cls-2" x="287" y="344" width="35" height="35" rx="10" ry="10"/>
+  <circle id="椭圆_1-5" data-name="椭圆 1" class="cls-2" cx="304" cy="362" r="10"/>
+  <image id="UMAKER" x="296" y="105" width="204" height="37" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAECAYAAACOXx+WAAAAsklEQVQYlS3PP0sCYBSF8R8Z1KAtglCLW0OWi4Oae462BNJWDU1N0RdoFxc/iZObW0ODS6RC7v4hQhBchIiX7lnu5XDOc7kZvOANN6ihgXfU8YghnjDDOS5xFPMWiXGNe6z3kPOvLH7RRB7l8JLaOMUnuphjhCI24S9xkYD7UfqOa310Yu/hARNUA7rACQ4CskUBVymXSumNFj6wwxd+MEYJZ3gOSMq94hh3mGKFQwxQ+QOePiKxs53U+wAAAABJRU5ErkJggg=="/>
+  <rect id="圆角矩形_2-6" data-name="圆角矩形 2" class="cls-2" x="473" y="345" width="35" height="35" rx="10" ry="10"/>
+  <circle id="椭圆_1-6" data-name="椭圆 1" class="cls-2" cx="490" cy="363" r="10"/>
+  <circle id="椭圆_3" data-name="椭圆 3" class="cls-2" cx="204.5" cy="259.5" r="74.5"/>
+  <circle id="椭圆_4" data-name="椭圆 4" class="cls-2" cx="204.5" cy="259.5" r="50.5"/>
+  <circle id="椭圆_3-2" data-name="椭圆 3" class="cls-2" cx="596.5" cy="259.5" r="74.5"/>
+  <circle id="椭圆_4-2" data-name="椭圆 4" class="cls-2" cx="596.5" cy="259.5" r="50.5"/>
+</svg>
