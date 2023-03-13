@@ -46,27 +46,27 @@ namespace handle {
         Generator.addObject('gesture', 'int', 'gesture=-1;');
         Generator.addCode("gesture==" + ag);
     }
-    //% block="APDS9960有接近时" blockType="boolean"
-    export function APDS9960_IsProximity(parameter: any, block: any) {
-        Generator.addInclude('APDS9960', '#include <Arduino_APDS9960.h>', false);
-        Generator.addSetup('APDS9960.begin', 'APDS.begin();');
-        Generator.addObject('proximity', 'int', 'proximity=-1;');
-        Generator.addCode("APDS.proximityAvailable()");
-    }
-    //% block="APDS9960接近值" blockType="command"
-    export function APDS9960_GetProximity(parameter: any, block: any) {
-        Generator.addInclude('APDS9960', '#include <Arduino_APDS9960.h>', false);
-        Generator.addSetup('APDS9960.begin', 'APDS.begin();');
-        Generator.addObject('gesture', 'int', 'gesture=-1;');
-        Generator.addCode("gesture = APDS.readGesture();");
-    }
-    //% block="APDS9960手势[AG]时" blockType="boolean"
-    //% AG.shadow="dropdown" AG.options="APDS_9960_gesture" AG.defl="APDS_9960_gesture.GESTURE_NONE"
-    export function APDS9960_Gesture(parameter: any, block: any) {
-        let ag = parameter.AG.code
-        Generator.addInclude('APDS9960', '#include <Arduino_APDS9960.h>', false);
-        Generator.addSetup('APDS9960.begin', 'APDS.begin();');
-        Generator.addObject('gesture', 'int', 'gesture=-1;');
-        Generator.addCode("gesture==" + ag);
-    }
+//     //% block="APDS9960有接近时" blockType="boolean"
+//     export function APDS9960_IsProximity(parameter: any, block: any) {
+//         Generator.addInclude('APDS9960', '#include <Arduino_APDS9960.h>', false);
+//         Generator.addSetup('APDS9960.begin', 'APDS.begin();');
+//         Generator.addObject('proximity', 'int', 'proximity=-1;');
+//         Generator.addCode("APDS.proximityAvailable()");
+//     }
+//     //% block="APDS9960接近值" blockType="command"
+//     export function APDS9960_GetProximity(parameter: any, block: any) {
+//         Generator.addInclude('APDS9960', '#include <Arduino_APDS9960.h>', false);
+//         Generator.addSetup('APDS9960.begin', 'APDS.begin();');
+//         Generator.addObject('gesture', 'int', 'gesture=-1;');
+//         Generator.addCode("gesture = APDS.readGesture();");
+//     }
+//     //% block="APDS9960手势[AG]时" blockType="boolean"
+//     //% AG.shadow="dropdown" AG.options="APDS_9960_gesture" AG.defl="APDS_9960_gesture.GESTURE_NONE"
+//     export function APDS9960_Gesture(parameter: any, block: any) {
+//         let ag = parameter.AG.code
+//         Generator.addInclude('APDS9960', '#include <Arduino_APDS9960.h>', false);
+//         Generator.addSetup('APDS9960.begin', 'APDS.begin();');
+//         Generator.addObject('gesture', 'int', 'gesture=-1;');
+//         Generator.addCode("gesture==" + ag);
+//     }
 }
