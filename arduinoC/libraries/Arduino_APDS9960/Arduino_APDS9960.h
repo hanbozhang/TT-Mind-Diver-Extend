@@ -31,6 +31,8 @@ enum {
   GESTURE_RIGHT = 3
 };
 
+double RGBtoPIX(int r,int g,int b);
+
 class APDS9960 {
 public:
   APDS9960(TwoWire &wire, int intPin);

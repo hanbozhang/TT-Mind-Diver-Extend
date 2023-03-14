@@ -19,6 +19,11 @@
 
 #include <Arduino_APDS9960.h>
 
+double RGBtoPIX(int r,int g,int b){
+  double PIX=r*0.299+g*0.587+b*0.114;
+  return PIX;
+}
+
 APDS9960::APDS9960(TwoWire& wire, int intPin) :
   _wire(wire),
   _intPin(intPin),

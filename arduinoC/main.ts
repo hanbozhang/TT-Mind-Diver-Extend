@@ -79,11 +79,17 @@ namespace APDS9960 {
     }
     //% block="APDS9960[CL]色数值" blockType="reporter"
     //% CL.shadow="dropdown" CL.options="APDS_9960_Color" CL.defl="APDS_9960_Color.APr"
-    export function APDS9960_Color(
+    export function APDS9960_Color(parameter: any, block: any){
         let cl = parameter.CL.code
         Generator.addInclude('APDS9960', '#include <Arduino_APDS9960.h>', false);
         Generator.addSetup('APDS9960.begin', 'APDS.begin();');
         Generator.addObject('ColorRGB', 'int', 'APr,APg,APb;');
         Generator.addCode(cl);
-    )
+    }
+    //% block="APDS9960亮度值" blockType="reporter"
+    export function APDS9960_GetPix(parameter: any, block: any){
+        Generator.addInclude('APDS9960', '#include <Arduino_APDS9960.h>', false);
+        Generator.addSetup('APDS9960.begin', 'APDS.begin();');
+        Generator.addCode("RGBtoPIX(APr,APg,APb)");
+    }
 }
