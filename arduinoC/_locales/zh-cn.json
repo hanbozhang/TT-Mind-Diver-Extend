@@ -1,4 +1,5 @@
 {
+    "APDS9960.APDS9960_Initialization|block":"APDS9960初始化[ID]",
     "APDS9960.APDS9960_IsGesture|block":"APDS9960有手势时",
     "APDS9960.APDS9960_GetGesture|block":"APDS9960获取手势",
     "APDS9960.APDS9960_Gesture|block":"APDS9960手势[AG]时",

@@ -44,13 +44,13 @@ APDS9960::~APDS9960()
 {
 }
 
-bool APDS9960::begin() {
+bool APDS9960::begin(uint8_t ID) {
   _wire.begin();
     
   // Check ID register
   uint8_t id;
   if (!getID(&id)) return false;
-  if (id!=0xAB) return false;
+  if (id!=ID) return false;
     
   // Disable everything
   if (!setENABLE(0x00)) return false;

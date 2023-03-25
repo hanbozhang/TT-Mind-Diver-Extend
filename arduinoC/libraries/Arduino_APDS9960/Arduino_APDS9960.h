@@ -38,7 +38,7 @@ public:
   APDS9960(TwoWire &wire, int intPin);
   virtual ~APDS9960();
 
-  bool begin();
+  bool begin(uint8_t ID);
   void end();
 
   int gestureAvailable();

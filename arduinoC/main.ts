@@ -26,20 +26,31 @@ enum TT_Drone_GPIO {
     //% block="IO21"
     21,
 }
+enum APDS_9960_ID{
+    //% block="V1"
+    AB,
+    //% block="V2"
+    A8,
+}
 
 //% color="#555555" iconWidth=50 iconHeight=40
 namespace APDS9960 {
+    //% block="APDS9960 Initialization [ID]" blockType="command"
+    //% ID.shadow="dropdown" ID.options="APDS_9960_ID" ID.defl="APDS_9960_ID.A8"
+    export function APDS9960_Initialization(parameter: any, block: any) {
+        let id = parameter.ID.code
+        Generator.addInclude('APDS9960', '#include <Arduino_APDS9960.h>', false);
+        Generator.addSetup('APDS9960.begin', 'APDS.begin(0x'+id+');');
+    }
     //% block="APDS9960 when there are gestures" blockType="boolean"
     export function APDS9960_IsGesture(parameter: any, block: any) {
         Generator.addInclude('APDS9960', '#include <Arduino_APDS9960.h>', false);
-        Generator.addSetup('APDS9960.begin', 'APDS.begin();');
         Generator.addObject('gesture', 'int', 'gesture=-1;');
         Generator.addCode("APDS.gestureAvailable()");
     }
     //% block="APDS9960 get gesture" blockType="command"
     export function APDS9960_GetGesture(parameter: any, block: any) {
         Generator.addInclude('APDS9960', '#include <Arduino_APDS9960.h>', false);
-        Generator.addSetup('APDS9960.begin', 'APDS.begin();');
         Generator.addObject('gesture', 'int', 'gesture=-1;');
         Generator.addCode("gesture = APDS.readGesture();");
     }
@@ -48,32 +59,27 @@ namespace APDS9960 {
     export function APDS9960_Gesture(parameter: any, block: any) {
         let ag = parameter.AG.code
         Generator.addInclude('APDS9960', '#include <Arduino_APDS9960.h>', false);
-        Generator.addSetup('APDS9960.begin', 'APDS.begin();');
         Generator.addObject('gesture', 'int', 'gesture=-1;');
         Generator.addCode("gesture==" + ag);
     }
     //% block="APDS9960 when an object is approaching" blockType="boolean"
     export function APDS9960_IsProximity(parameter: any, block: any) {
         Generator.addInclude('APDS9960', '#include <Arduino_APDS9960.h>', false);
-        Generator.addSetup('APDS9960.begin', 'APDS.begin();');
         Generator.addCode("APDS.proximityAvailable()");
     }
     //% block="APDS9960 distance value" blockType="reporter"
     export function APDS9960_GetProximity(parameter: any, block: any) {
         Generator.addInclude('APDS9960', '#include <Arduino_APDS9960.h>', false);
-        Generator.addSetup('APDS9960.begin', 'APDS.begin();');
         Generator.addCode("(APDS.readProximity())");
     }
     //% block="APDS9960 when reading a color" blockType="boolean"
     export function APDS9960_IsColor(parameter: any, block: any) {
         Generator.addInclude('APDS9960', '#include <Arduino_APDS9960.h>', false);
-        Generator.addSetup('APDS9960.begin', 'APDS.begin();');
         Generator.addCode("(APDS.colorAvailable())");
     }
     //% block="APDS9960 get color" blockType="command"
     export function APDS9960_GetColor(parameter: any, block: any) {
         Generator.addInclude('APDS9960', '#include <Arduino_APDS9960.h>', false);
-        Generator.addSetup('APDS9960.begin', 'APDS.begin();');
         Generator.addObject('ColorRGB', 'int', 'APr,APg,APb;');
         Generator.addCode("APDS.readColor(APr, APg, APb);");
     }
@@ -82,14 +88,12 @@ namespace APDS9960 {
     export function APDS9960_Color(parameter: any, block: any){
         let cl = parameter.CL.code
         Generator.addInclude('APDS9960', '#include <Arduino_APDS9960.h>', false);
-        Generator.addSetup('APDS9960.begin', 'APDS.begin();');
         Generator.addObject('ColorRGB', 'int', 'APr,APg,APb;');
         Generator.addCode(cl);
     }
     //% block="APDS9960 brightness value" blockType="reporter"
     export function APDS9960_GetPix(parameter: any, block: any){
         Generator.addInclude('APDS9960', '#include <Arduino_APDS9960.h>', false);
-        Generator.addSetup('APDS9960.begin', 'APDS.begin();');
         Generator.addCode("RGBtoPIX(APr,APg,APb)");
     }
 }
